@@ -1,0 +1,19 @@
+<ShowDebugInfo>1</ShowDebugInfo>
+<MonitorIndices>1</MonitorIndices>
+<SubSectionIndices>1</SubSectionIndices>
+<PauseAndLeave>0</PauseAndLeave>
+<AppMode>1</AppMode>
+<LoadMapping>0</LoadMapping>
+<DoWarp>0</DoWarp>
+<CornerX>0.040000000</CornerX>
+<CornerY>0.020000000</CornerY>
+<OverlapPixels>210</OverlapPixels>
+<SpoutSender>UnitySender1</SpoutSender>
+<resolution>
+    <X>1920</X>
+    <Y>1080</Y>
+</resolution>
+<resolution>
+    <X>1920</X>
+    <Y>1200</Y>
+</resolution>

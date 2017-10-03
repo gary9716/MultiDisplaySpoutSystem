@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscBundle.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscMessage.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscParameterSync.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscReceiver.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscSender.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32\NetworkingUtils.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32\UdpSocket.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\src\ofxXmlSettings.cpp">
+      <Filter>addons\ofxXmlSettings\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs\tinyxml.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs\tinyxmlerror.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxBezierWarpManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\displayApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxBezierWarp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutDirectX.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutGLDXinterop.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutGLextensions.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutMemoryShare.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutReceiver.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutSDK.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutSender.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutSenderNames.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutSharedMemory.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SpoutSDK\SpoutCopy.cpp">
+      <Filter>SpoutSDK</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{69b8057a-12d3-4be5-8561-d09292782880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc">
+      <UniqueIdentifier>{2d4172ce-2b77-4e2a-8f09-bb4cdd558165}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\src">
+      <UniqueIdentifier>{bc0597c2-63de-4b31-a55e-0d27261c6e4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs">
+      <UniqueIdentifier>{2e56b601-64db-4f25-8b74-08f3763371df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack">
+      <UniqueIdentifier>{a8aa60bd-2874-4bd9-a905-535cd0af1f7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack\src">
+      <UniqueIdentifier>{0047ae97-4908-4262-83f9-0ca3fcfd5248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack\src\ip">
+      <UniqueIdentifier>{1bfb6c65-02e2-41a1-812e-5f91085558a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack\src\ip\win32">
+      <UniqueIdentifier>{4412d857-9444-47e5-aeb1-163dac350367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack\src\osc">
+      <UniqueIdentifier>{72b19e9b-06eb-4367-93b0-7754625af8f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings">
+      <UniqueIdentifier>{88b66b1f-0a38-475a-a488-ca67ccfe8997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings\src">
+      <UniqueIdentifier>{287b8ecf-d8ad-47df-b5c8-20bc027ff111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings\libs">
+      <UniqueIdentifier>{e4b5c0c3-ae98-4c9f-b6fc-2538a9416cfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpoutSDK">
+      <UniqueIdentifier>{01a2220e-bcfb-4a7e-89d2-12b07fca8c09}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOsc.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscArg.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscBundle.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscMessage.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscParameterSync.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscReceiver.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscSender.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\NetworkingUtils.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\PacketListener.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\TimerListener.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\UdpSocket.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\MessageMappingOscPacketListener.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscException.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscHostEndianness.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscPacketListener.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\src\ofxXmlSettings.h">
+      <Filter>addons\ofxXmlSettings\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs\tinyxml.h">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxBezierWarp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxBezierWarpManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\displayApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutDirectX.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutGLDXinterop.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutGLextensions.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutMemoryShare.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutReceiver.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutSDK.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutSender.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutSenderNames.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutSharedMemory.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\Spout.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutCommon.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SpoutSDK\SpoutCopy.h">
+      <Filter>SpoutSDK</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>
