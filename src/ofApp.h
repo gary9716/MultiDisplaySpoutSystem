@@ -22,7 +22,7 @@
 
 #include <stdlib.h>     /* exit, EXIT_FAILURE */
 #include "ofMain.h"
-#include "Spout.h" // Spout SDK
+#include "SpoutSDK/Spout.h" // Spout SDK
 #include "ofxOsc.h"
 #include "ofxBezierWarpManager.h"
 

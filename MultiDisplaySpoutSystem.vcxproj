@@ -137,7 +137,7 @@ C:\Users\KanTei\Documents\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(Addi
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(OF_ROOT)\addons\ofxOsc\libs;$(OF_ROOT)\addons\ofxOsc\libs\oscpack;$(OF_ROOT)\addons\ofxOsc\libs\oscpack\src;$(OF_ROOT)\addons\ofxOsc\libs\oscpack\src\ip;$(OF_ROOT)\addons\ofxOsc\libs\oscpack\src\ip\win32;$(OF_ROOT)\addons\ofxOsc\libs\oscpack\src\osc;$(OF_ROOT)\addons\ofxOsc\src;$(OF_ROOT)\addons\ofxXmlSettings\libs;$(OF_ROOT)\addons\ofxXmlSettings\src;SpoutSDK</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(OF_ROOT)\addons\ofxOsc\libs;$(OF_ROOT)\addons\ofxOsc\libs\oscpack;$(OF_ROOT)\addons\ofxOsc\libs\oscpack\src;$(OF_ROOT)\addons\ofxOsc\libs\oscpack\src\ip;$(OF_ROOT)\addons\ofxOsc\libs\oscpack\src\ip\win32;$(OF_ROOT)\addons\ofxOsc\libs\oscpack\src\osc;$(OF_ROOT)\addons\ofxOsc\src;$(OF_ROOT)\addons\ofxXmlSettings\libs;$(OF_ROOT)\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -195,21 +195,21 @@ C:\Users\KanTei\Documents\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(Addi
     <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutCopy.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutDirectX.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutGLDXinterop.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutGLextensions.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutMemoryShare.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutReceiver.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutSDK.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutSender.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutSenderNames.cpp" />
-    <ClCompile Include="SpoutSDK\SpoutSharedMemory.cpp" />
     <ClCompile Include="src\displayApp.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\ofxBezierWarp.cpp" />
     <ClCompile Include="src\ofxBezierWarpManager.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutCopy.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutDirectX.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutGLDXinterop.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutGLextensions.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutMemoryShare.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutReceiver.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutSDK.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutSender.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutSenderNames.cpp" />
+    <ClCompile Include="src\SpoutSDK\SpoutSharedMemory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.h" />
@@ -234,22 +234,22 @@ C:\Users\KanTei\Documents\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(Addi
     <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxOsc\src\ofxOscSender.h" />
     <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
-    <ClInclude Include="SpoutSDK\Spout.h" />
-    <ClInclude Include="SpoutSDK\SpoutCommon.h" />
-    <ClInclude Include="SpoutSDK\SpoutCopy.h" />
-    <ClInclude Include="SpoutSDK\SpoutDirectX.h" />
-    <ClInclude Include="SpoutSDK\SpoutGLDXinterop.h" />
-    <ClInclude Include="SpoutSDK\SpoutGLextensions.h" />
-    <ClInclude Include="SpoutSDK\SpoutMemoryShare.h" />
-    <ClInclude Include="SpoutSDK\SpoutReceiver.h" />
-    <ClInclude Include="SpoutSDK\SpoutSDK.h" />
-    <ClInclude Include="SpoutSDK\SpoutSender.h" />
-    <ClInclude Include="SpoutSDK\SpoutSenderNames.h" />
-    <ClInclude Include="SpoutSDK\SpoutSharedMemory.h" />
     <ClInclude Include="src\displayApp.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\ofxBezierWarp.h" />
     <ClInclude Include="src\ofxBezierWarpManager.h" />
+    <ClInclude Include="src\SpoutSDK\Spout.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutCommon.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutCopy.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutDirectX.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutGLDXinterop.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutGLextensions.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutMemoryShare.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutReceiver.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutSDK.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutSender.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutSenderNames.h" />
+    <ClInclude Include="src\SpoutSDK\SpoutSharedMemory.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
