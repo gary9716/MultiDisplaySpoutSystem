@@ -17,6 +17,7 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+	adapted by Kuan-Ting Chou on 2017-04-22 for NTMOFA art exhibition
 */
 #pragma once
 
@@ -128,11 +129,11 @@ class ofApp : public ofBaseApp{
 		unique_ptr<ofGLFWWindowSettings> createWinSetting(ofVec2f& pos, int width, int height, int monitorIndex, shared_ptr<ofAppBaseWindow> sharedWin);
 		void setupRestOfWindows();
 		void setAppMode(int appMode);
-		ofFbo* createFboAndPutIntoVector(int width, int height, int format, vector<ofFbo *>& container, map<string, ofFbo*>* fboMap);
-		void ShowAndFocusOnConsole();
-		void ShowAndFocusOnThisAppWindow();
-		void PassMouseEventToSelectedApp(float xRatio, float yRatio, int button, int eventType);
-		void ExtractPartialFromWholeTexture(int resX, int resY, int appIndex);
+		ofFbo* createFboAndPutIntoVector(int width, int height, int format, vector<ofFbo *>& container);
+		void showAndFocusOnConsole();
+		void showAndFocusOnThisAppWindow();
+		void passMouseEventToSelectedApp(float xRatio, float yRatio, int button, int eventType);
+		void extractPartialFromWholeTexture(int resX, int resY, int appIndex);
 		SpoutReceiver spoutreceiver; // A Spout receiver object
 		ofxOscReceiver mainChannelReceiver;
 		ofxOscMessage m;
@@ -141,6 +142,7 @@ class ofApp : public ofBaseApp{
 		unsigned int winHeight = 0;
 		ofTrueTypeFont font;
 		char str[256];
+		
 
 		vector<ofVec2f> monitorResolution;
 		vector<int> subSectionIndices;
@@ -152,7 +154,6 @@ class ofApp : public ofBaseApp{
 		bool areWindowsSetup = false;
 
 		bool warpInitPosRand = false;
-		bool showFPS = false;
 		bool noWarping = false; //no bezier warping and masking
 		HWINEVENTHOOK g_hook;
 		RECT rcClip;

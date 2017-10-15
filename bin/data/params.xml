@@ -1,7 +1,7 @@
 <ShowDebugInfo>1</ShowDebugInfo>
 <MonitorIndices>1</MonitorIndices>
 <SubSectionIndices>1</SubSectionIndices>
-<PauseAndLeave>0</PauseAndLeave>
+<PauseAndLeave>1</PauseAndLeave>
 <AppMode>1</AppMode>
 <LoadMapping>0</LoadMapping>
 <DoWarp>0</DoWarp>
@@ -12,8 +12,4 @@
 <resolution>
     <X>1920</X>
     <Y>1080</Y>
-</resolution>
-<resolution>
-    <X>1920</X>
-    <Y>1200</Y>
 </resolution>

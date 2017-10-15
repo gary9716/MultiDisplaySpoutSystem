@@ -25,6 +25,8 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	=========================================================================
+
+	adapted by Kuan-Ting Chou on 2017-04-22 for NTMOFA art exhibition
 */
 //Basically, this is a spout receiver and bezier warping app for panoramic projection(9 projectors). 
 //This app has been proven that it can receive an opengl texture with size 15390 * 1200, retrieve part of it, warp an retrieved part and project via one of 9 projectors. 
@@ -64,7 +66,6 @@ void ofApp::setup(){
 	g_Height = winHeight;
 
 	font.loadFont("arial.ttf", fontSize);
-	
 	
 	// Record the area in which the cursor can move. 
 	GetClipCursor(&rcOldClip);
@@ -112,9 +113,9 @@ void ofApp::setupRestOfWindows() {
 		
 		ofFbo* fboPtr = NULL;
 		
-		fboPtr = createFboAndPutIntoVector(resX, resY, defaultFormat, srcFbo, NULL); //create source frame buffer
+		fboPtr = createFboAndPutIntoVector(resX, resY, defaultFormat, srcFbo); //create source frame buffer
 		bezManager.addFbo(fboPtr, !warpInitPosRand, cornerOffsetX, cornerOffsetY);
-		fboPtr = createFboAndPutIntoVector(resX, resY, defaultFormat, destFbo, NULL); //create destination frame buffer
+		fboPtr = createFboAndPutIntoVector(resX, resY, defaultFormat, destFbo); //create destination frame buffer
 		
 		auto remainedApp = make_shared<displayApp>(thisApp, i, monitorIndex, fboPtr->getTextureReference());
 		ofRunApp(remainedWindow, remainedApp);
@@ -174,7 +175,7 @@ void ofApp::onOSCMessageReceived(ofxOscMessage &msg) {
 	}
 	else if (addr == "console") {
 		if (message == "focus") {
-			ShowAndFocusOnConsole();
+			showAndFocusOnConsole();
 		}
 	}
 }
@@ -185,12 +186,12 @@ void ofApp::setAppMode(int toAppMode) {
 		bezManager.setGuideVisible(false);
 		showDebugInfo = false;
 		setAllWindowsForeground();
-		ShowAndFocusOnThisAppWindow();
+		showAndFocusOnThisAppWindow();
 	}
 	else if (appMode == Cali) {
 		bezManager.setGuideVisible(true);
 		setAllWindowsForeground();
-		ShowAndFocusOnThisAppWindow();
+		showAndFocusOnThisAppWindow();
 		selectedAppIndex = 0;
 		noWarping = false; //it's nonsense that do calibration without warping.
 	}
@@ -206,8 +207,21 @@ void ofApp::update() {
 }
 
 
-void ofApp::ExtractPartialFromWholeTexture(int resX, int resY, int appIndex)
+void ofApp::extractPartialFromWholeTexture(int resX, int resY, int appIndex)
 {
+	/*
+	for customization, one can extract arbitrary region based on appIndex
+	for ex:
+	if(appIndex == 0) {
+		//extract region for application with index 0
+	}
+	else if(appIndex == 1) {
+		//extract region for application with index 1
+	}
+	//... and so on
+	*/
+	
+	//In my art exhibition, the width of overlapping area and the resolution of the display are fixed, so I use a formula to calculate the area that should be extracted.
 	unsigned int startX = 0;
 	//calculate the starting x coordinate in the wholeTexture. 
 	//the rectangular area from (startX, 0) to (startX + resX, resY) will be drawn by calling wholeTex.drawSubsection.
@@ -241,7 +255,7 @@ void ofApp::processTexWithAppIndex(int appIndex) {
 		ofClear(0);
 
 		if (wholeTex.isAllocated()) {
-			ExtractPartialFromWholeTexture(resX, resY, appIndex);
+			extractPartialFromWholeTexture(resX, resY, appIndex);
 		}
 
 		destFboPtr->end(); //end drawing into destination frame buffer
@@ -260,7 +274,7 @@ void ofApp::processTexWithAppIndex(int appIndex) {
 		ofClear(0);
 		if (drawContent) {
 			if (wholeTex.isAllocated()) {
-				ExtractPartialFromWholeTexture(resX, resY, appIndex);
+				extractPartialFromWholeTexture(resX, resY, appIndex);
 			}
 		}
 		else {
@@ -359,11 +373,12 @@ void ofApp::spoutTryToReceiveTex() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
+	ofClear(0);
+
 	spoutTryToReceiveTex(); //try to receive texture from spout sender
 
 	if (setupDone) {
-		ofClear(0);
-
+		
 		if (appMode == Demo) {
 			if (bInitialized)
 				drawFromCenter("you're good to go", 0, 0);
@@ -382,6 +397,14 @@ void ofApp::draw() {
 		}
 	}
 
+	if (showDebugInfo) {
+		sprintf(str, "FPS:%.0f", ofGetFrameRate());
+		ofPushStyle();
+		ofSetColor(0, 0, 255);
+		font.drawString(str, 30, 60);
+		ofPopStyle();
+	}
+	
 }
 
 void ofApp::gotMessage(ofMessage msg) {
@@ -389,7 +412,7 @@ void ofApp::gotMessage(ofMessage msg) {
 }
 
 
-void ofApp::PassMouseEventToSelectedApp(float xRatio, float yRatio, int button, int eventType)
+void ofApp::passMouseEventToSelectedApp(float xRatio, float yRatio, int button, int eventType)
 {
 	if (appMode != Cali || selectedAppIndex < 0 || selectedAppIndex >= numMonitorsToUse)
 		return;
@@ -407,11 +430,11 @@ void ofApp::PassMouseEventToSelectedApp(float xRatio, float yRatio, int button, 
 
 //Input Event Section Start-----------------
 void ofApp::mousePressed(int x, int y, int button) {
-	PassMouseEventToSelectedApp((float)x / winWidth, (float)y / winHeight, button, mPressed);
+	passMouseEventToSelectedApp((float)x / winWidth, (float)y / winHeight, button, mPressed);
 }
 
 void ofApp::mouseDragged(int x, int y, int button) {
-	PassMouseEventToSelectedApp((float)x / winWidth, (float)y / winHeight, button, mDragged);
+	passMouseEventToSelectedApp((float)x / winWidth, (float)y / winHeight, button, mDragged);
 }
 
 void ofApp::keyPressed(int key) {
@@ -465,28 +488,9 @@ void ofApp::reallocateTexture(ofTexture& texture) {
 	}
 }
 
-ofFbo* ofApp::createFboAndPutIntoVector(int width, int height, int format, vector<ofFbo *>& container, map<string, ofFbo*>* fboMap) {
-	ofFbo* fboPtr = NULL;
+ofFbo* ofApp::createFboAndPutIntoVector(int width, int height, int format, vector<ofFbo *>& container) {
+	ofFbo* fboPtr = new ofFbo();
 	
-	if (fboMap != NULL) {
-		oss.str("");
-		oss << width << "x" << height << "," << format;
-		string key = oss.str();
-		auto iter = fboMap->find(key);
-		if (iter == fboMap->end()) {
-			//cout << "key:" << key << ",allocate new fbo" << endl;
-			fboPtr = new ofFbo();
-			(*fboMap)[key] = fboPtr;
-		}
-		else {
-			//cout << "using old fbo" << endl;
-			fboPtr = iter->second;
-		}
-	}
-	else {
-		fboPtr = new ofFbo();
-	}
-
 	if(!fboPtr->isAllocated())
 		fboPtr->allocate(width, height, format);
 	
@@ -494,7 +498,7 @@ ofFbo* ofApp::createFboAndPutIntoVector(int width, int height, int format, vecto
 	return fboPtr;
 }
 
-void ofApp::ShowAndFocusOnConsole() {
+void ofApp::showAndFocusOnConsole() {
 	HWND winID = GetConsoleWindow();
 	
 	ShowWindowAsync(winID, SW_SHOWNORMAL);
@@ -503,7 +507,7 @@ void ofApp::ShowAndFocusOnConsole() {
 	cout << "console:" << winID << " focused" << endl;
 }
 
-void ofApp::ShowAndFocusOnThisAppWindow()
+void ofApp::showAndFocusOnThisAppWindow()
 {
 	HWND winID = ofGetWin32Window();
 

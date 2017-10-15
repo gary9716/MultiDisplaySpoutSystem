@@ -1,3 +1,5 @@
+//Created by Kuan-Ting Chou on 2017-04-22
+
 #pragma once
 
 #include "ofMain.h"
