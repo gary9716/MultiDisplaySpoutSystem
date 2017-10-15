@@ -1,7 +1,7 @@
 # MultiDisplaySpoutSystem
 
-It is a panoramic projection system implemented in OpenFrameworks and was used in my art exhibition in National Taiwan Museum of Fine Arts. It has been demonstrated that I can let the system spawn 9 windows applications on 9 displays and run a Vive VR application all in single computer in the same time and it's pretty smooth. ( I forgot the actual frame rate but I wouldn't feel dizzy during experiencing the VR app.)
-The overall system contains 2 OpenFrameworks classes and their roles are:
+It is a panoramic projection system implemented in OpenFrameworks and was used in my art exhibition in National Taiwan Museum of Fine Arts. It has been demonstrated that I can let the system spawn 9 windows applications on 9 displays and run a Vive VR application all in single computer in the same time and it's pretty smooth. ( I forgot the actual frame rate but I wouldn't feel dizzy during experiencing the VR app.)  
+The overall system contains 2 OpenFrameworks class and their roles are:
 1. ofApp:
 * receive an large texture via [Spout](http://spout.zeal.co/) library (In my case, it received an texture with resolution of 15390* 1200 from Unity).
 * show calibration GUI in calibration mode.
@@ -30,14 +30,23 @@ These instructions will get you a copy of the project up and running on your loc
 *  [Setup SDK with Visual Studio](http://openframeworks.cc/setup/vs/)
 2. Download this repository and unzip it
 3. Open the project generator in the OpenFrameworks SDK folder (the path would be "{path to the root of OF SDK}\projectGenerator-vs")
+
 ![projectGenerator](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/projectGenerator.PNG?raw=true)
-4. click the "import" button and select the project folder which is the root of bin and src.
+
+4. click the "import" button and select the project folder which is the root of bin and src.  
+
 ![setProjPath](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/setProjectPath.PNG?raw=true)
-5. If the project is successfully imported, it should look like the image below. click the "Update" button and then click the "Open In IDE" button.
+
+5. If the project is successfully imported, it should look like the image below. click the "Update" button and then click the "Open In IDE" button.  
+
 ![importSucceed](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/importSucceed.PNG?raw=true)
-6. click Build > Build Solution and after the project is successfully built, the executable would be in the bin folder of project folder.
-![BuildSolution](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/BuildSolution.PNG?raw=true)
-![executable](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/executable.PNG?raw=true)
+
+6. click Build > Build Solution and after the project is successfully built, the executable would be in the bin folder of project folder.  
+
+![BuildSolution](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/BuildSolution.PNG?raw=true)  
+
+![executable](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/executable.PNG?raw=true)  
+
 ### Specify Parameters
 
 There is a parameter file called "param.xml" under the path {project path}\bin\data.
@@ -46,16 +55,23 @@ The meaning of these parameters:
 
 2. MonitorIndices: the indices of monitors(or displays) you want to use. the information can be look up in console window.
 The console window in the image below sort the monitors' virtual position by their X position.
+
 ![consoleWin](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/use9Projectors.jpg?raw=true)
+
 According to this information, one can set the params.xml like this:
+
 ![params](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/9ProjectorsParams.PNG?raw=true)
+
 3. SubSectionIndices: the indices used for calculating which part of texture should be extracted.
 Given the resolution of each display and their overlapping width, the left boundary of each extracted is calculated as ( resolutionX - overlappingWidth ) * index.
-For example: the left boundary of an application with subsection index 1 would be (1920 - 210) * 1 = 1710
-![projectorsParams](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/projectorsParams.PNG?raw=true)
+For example: the left boundary of an application with subsection index 1 would be (1920 - 210) * 1 = 1710  
+
+![projectorsParams](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/projectorsParams.PNG?raw=true)  
+
 Because it’s circular, setting 1 and 2 are both valid setting.
 
 Another point is that the monitors in windows display setting also need to be arranged in the right order.
+
 ![windowsDisplaySetting](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/windowsDisplaySetting.PNG?raw=true)
 
 4. PauseAndLeave: pause for viewing the information in console window and terminate the application. mainly for adjusting parameters.(1 for using this function and 0 for not using this function)
@@ -85,6 +101,7 @@ Steps of setting up the SpoutSender in Unity:
 3. click play button in Unity.
 4. set the AppMode as 0 in param.xml and run the executable in the bin folder of project folder.
 5. see whether the system project correctly.
+
 ![testResult](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/successfullyRunUp.png?raw=true)
 
 ## Specs of the computer in the art exhibition:
