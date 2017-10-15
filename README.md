@@ -117,7 +117,7 @@ steps and available feature in calibration mode:
    *  ESC: close the system
    *  z: switch between drawing the warped texture or drawing calibration rectangles.
    *  d: restore the default setting of current selected displayApp.  
-   ![dSwitch]((https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/dSwitch.png?raw=true))
+   ![dSwitch](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/dSwitch.PNG?raw=true)
    *  arrow keys: move the selected anchor or crosshair.
 *  mouse interaction:
    *  right mouse click on one of crosshairs: show/hide bezier warping anchors.
