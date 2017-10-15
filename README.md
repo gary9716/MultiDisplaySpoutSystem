@@ -43,16 +43,37 @@ These instructions will get you a copy of the project up and running on your loc
 There is a parameter file called "param.xml" under the path {project path}\bin\data.
 The meaning of these parameters:
 1. ShowDebugInfo: show debugging information like FPS.
+
 2. MonitorIndices: the indices of monitors(or displays) you want to use. the information can be look up in console window.
+The console window in the image below sort the monitors' virtual position by their X position.
+![consoleWin](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/use9Projectors.jpg?raw=true)
+According to this information, one can set the params.xml like this:
+![params](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/9ProjectorsParams.PNG?raw=true)
 3. SubSectionIndices: the indices used for calculating which part of texture should be extracted.
+Given the resolution of each display and their overlapping width, the left boundary of each extracted is calculated as ( resolutionX - overlappingWidth ) * index.
+For example: the left boundary of an application with subsection index 1 would be (1920 - 210) * 1 = 1710
+![projectorsParams](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/projectorsParams.PNG?raw=true)
+Because it’s circular, setting 1 and 2 are both valid setting.
+
+Another point is that the monitors in windows display setting also need to be arranged in the right order.
+![windowsDisplaySetting](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/windowsDisplaySetting.PNG?raw=true)
+
 4. PauseAndLeave: pause for viewing the information in console window and terminate the application. mainly for adjusting parameters.(1 for using this function and 0 for not using this function)
+
 5. AppMode: 0 for demonstration mode and 1 for calibration mode.
+
 6. LoadMapping: load the bezier warping parameters saved in BezierWarpManager_settings.xml.(1 for loading and 0 for not loading)
+
 7. DoWarp: 1 for applying bezier warping and 0 for simply displaying extracted region.
+
 8. CornerX: the percentage of padding of X direction in calibration mode.
+
 9. CornerY: the percentage of padding of Y direction in calibration mode.
+
 10. OverlapPixels: the width of overlapping area between two consecutive displays.
+
 11. SpoutSender: the name of the spout sender that sends the shared texture.
+
 12. resolution: the resolution of certain monitor.
 
 ### Test the system
