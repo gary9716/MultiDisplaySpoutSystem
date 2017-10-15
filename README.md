@@ -124,9 +124,6 @@ steps and available feature in calibration mode:
    *  left mouse click on one of crosshairs or anchors: select clicked anchor or crosshair
    *  left mouse drag on one of crosshairs or anchors: drag the anchor or crosshair.
 
-
-
-
 ## Specs of the computer in the art exhibition:
 
 * CPU: i7 7700K
@@ -159,7 +156,8 @@ This project is licensed under the GNU Lesser General Public License - see the [
 
 ![photo3](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/photo3.jpg?raw=true)  
 
-
+![photo4](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/IMG_VR_and_Projection.jpg?raw=true)  
+  
 ## Acknowledgments
 
 * The great addons and library I have used in this project
