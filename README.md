@@ -105,17 +105,27 @@ Steps of setting up the SpoutSender in Unity:
 ![testResult](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/successfullyRunUp.png?raw=true)
 
 ## Calibration
-![caliMode](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/calibrationMode.png?raw=true)
+![caliMode](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/calibrationMode.png?raw=true)  
 In calibration mode, Main App(ofApp) would render the content based on currently selected displayApp. User can switch among displayApps, adjust the overlapping area and warp the content for adapting curve surface.
 steps and available feature in calibration mode:
 1. set the AppMode as 1 and run the executable
-2. focus Main App and the following key pressed has corresponding feature:
-*  F1 or F2: switch among displayApps
-*  F5: save the warping parameters
-*  F6: load the warping parameters
-*  ESC: close the system
-*  z: switch between drawing the warped result and drawing calibration rectangles.
-*  d: restore the default setting of current selected displayApp.
+2. focus on the Main App and user cam do the following interaction.
+*  key pressed:
+   *  F1 or F2: switch among displayApps
+   *  F5: save the warping parameters
+   *  F6: load the warping parameters
+   *  ESC: close the system
+   *  z: switch between drawing the warped texture or drawing calibration rectangles.
+   *  d: restore the default setting of current selected displayApp.  
+   ![dSwitch]((https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/dSwitch.png?raw=true))
+   *  arrow keys: move the selected anchor or crosshair.
+*  mouse interaction:
+   *  right mouse click on one of crosshairs: show/hide bezier warping anchors.
+   *  left mouse click on one of crosshairs or anchors: select clicked anchor or crosshair
+   *  left mouse drag on one of crosshairs or anchors: drag the anchor or crosshair.
+
+
+
 
 ## Specs of the computer in the art exhibition:
 
