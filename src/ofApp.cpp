@@ -460,10 +460,6 @@ void ofApp::keyPressed(int key) {
 			drawContent = !drawContent;
 			cout << "drawContent flag:" << drawContent << endl;
 		}
-		else if (key == 120) { //X
-			drawGridInCali = !drawGridInCali;
-			cout << "drawGrid flag:" << drawGridInCali << endl;
-		}
 		else if (selectedAppIndex >= 0 && selectedAppIndex < bezWarps->size()) {
 			if (key == 100) { //D
 				bezWarps->at(selectedAppIndex).defaults();

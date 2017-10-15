@@ -104,6 +104,19 @@ Steps of setting up the SpoutSender in Unity:
 
 ![testResult](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/successfullyRunUp.png?raw=true)
 
+## Calibration
+![caliMode](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/calibrationMode.png?raw=true)
+In calibration mode, Main App(ofApp) would render the content based on currently selected displayApp. User can switch among displayApps, adjust the overlapping area and warp the content for adapting curve surface.
+steps and available feature in calibration mode:
+1. set the AppMode as 1 and run the executable
+2. focus Main App and the following key pressed has corresponding feature:
+*  F1 or F2: switch among displayApps
+*  F5: save the warping parameters
+*  F6: load the warping parameters
+*  ESC: close the system
+*  z: switch between drawing the warped result and drawing calibration rectangles.
+*  d: restore the default setting of current selected displayApp.
+
 ## Specs of the computer in the art exhibition:
 
 * CPU: i7 7700K
@@ -128,6 +141,14 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## License
 
 This project is licensed under the GNU Lesser General Public License - see the [LICENSE.txt](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/LICENSE.txt) file for details
+
+## Art exhibition photos
+![photo1](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/IMG_20170512_130739.jpg?raw=true)  
+
+![photo2](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/IMG_20170513_145051.jpg?raw=true)  
+
+![photo3](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/photo3.jpg?raw=true)  
+
 
 ## Acknowledgments
 
