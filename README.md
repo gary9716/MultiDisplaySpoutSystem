@@ -162,4 +162,5 @@ This project is licensed under the GNU Lesser General Public License - see the [
 
 * The great addons and library I have used in this project
 * Inspired by my friend called Liu Ting Chun who is studying in Taipei National University of the Arts
+*  NTMOFA for giving me an chance 
 *  [README Template](https://gist.github.com/PurpleBooth/b24679402957c63ec426)
