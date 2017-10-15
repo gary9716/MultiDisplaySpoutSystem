@@ -188,12 +188,7 @@ void parseParamsXml(const string& path,
 		for (string param : params) {
 			monitorIndices.push_back(stoi(param));
 		}
-		cout << "number elements:" << monitorIndices.size() << ",monitorIndices:" << endl;
-		for (int parsedIndex : monitorIndices) {
-			cout << parsedIndex << " ";
-		}
-		cout << endl;
-
+		
 		subSectionIndices.clear();
 		params = ofSplitString(
 			xmlSettings.getValue("SubSectionIndices", ""),
@@ -201,12 +196,7 @@ void parseParamsXml(const string& path,
 		for (string param : params) {
 			subSectionIndices.push_back(stoi(param));
 		}
-		cout << "number elements:" << subSectionIndices.size() << ",corresponding parts:" << endl;
-		for (int parsedIndex : subSectionIndices) {
-			cout << parsedIndex << " ";
-		}
-		cout << endl;
-
+		
 		pauseAndLeave = xmlSettings.getValue("PauseAndLeave", 0) == 1;
 		appMode = xmlSettings.getValue("AppMode", Demo);
 		loadWarpSetting = xmlSettings.getValue("LoadMapping", 0) == 1;
@@ -218,10 +208,6 @@ void parseParamsXml(const string& path,
 		overlapPixels = xmlSettings.getValue("OverlapPixels", 0);
 		isDebugging = xmlSettings.getValue("ShowDebugInfo", 0) == 1;
 		spoutSenderName = xmlSettings.getValue("SpoutSender", "");
-		/*
-		cout << "appMode:" << appMode << ",loadWarpSetting:" << loadWarpSetting << ",doWarp:" << doWarp << ",corner:(" << cornerX << "," << cornerY << ")" 
-			<< ",overlap:" << overlapPixels << ",debugging:"<< isDebugging << endl;
-		*/
 		
 		monitorResolution.clear();
 		int numTagsToParsed = monitorIndices.size();
@@ -313,7 +299,7 @@ int outputMonitorInfo() {
 
 	for (int i = 0; i < count; i++) {
 		MonInfo& monInfo = monInfos[i];
-		ofLogNotice() << "monIndex:" << monInfo.monIndex << ", physical size: " << monInfo.phySize.x << "x" << monInfo.phySize.y << "mm at " << monInfo.pos.x << ", " << monInfo.pos.y;
+		ofLogNotice() << "monitor index:" << monInfo.monIndex << ", physical size: " << monInfo.phySize.x << "x" << monInfo.phySize.y << "mm at " << monInfo.pos.x << ", " << monInfo.pos.y;
 	}
 
 	cout << "num available monitors:" << count << endl;

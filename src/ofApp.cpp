@@ -381,9 +381,9 @@ void ofApp::draw() {
 		
 		if (appMode == Demo) {
 			if (bInitialized)
-				drawFromCenter("you're good to go", 0, 0);
+				drawFromCenter("system works normally", 0, 0);
 			else
-				drawFromCenter("wait for unity", 0, 0);
+				drawFromCenter("wait for sender", 0, 0);
 		}
 		else if(appMode == Cali){
 			//served as an control panel for calibrating the projecting result.
