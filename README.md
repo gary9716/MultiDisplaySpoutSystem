@@ -120,9 +120,9 @@ How To:
    *  d: restore the default setting of current selected displayApp.
    *  arrow keys: move the selected anchor or crosshair.
 *  mouse interaction:
-   *  right mouse click on one of crosshairs: show/hide bezier warping anchors.
-   *  left mouse click on one of crosshairs or anchors: select clicked anchor or crosshair
-   *  left mouse drag on one of crosshairs or anchors: drag the anchor or crosshair.
+   *  right click on one of crosshairs: show/hide bezier warping anchors.
+   *  left click on one of crosshairs or anchors: select clicked anchor or crosshair
+   *  left click and drag one of crosshairs or anchors: move the anchor or crosshair.
 
 ## Specs of the computer in the art exhibition:
 
