@@ -1,9 +1,9 @@
 # MultiDisplaySpoutSystem
 
-It is a panoramic projection system implemented in OpenFrameworks and was used in my art exhibition in National Taiwan Museum of Fine Arts. It has been demonstrated that I can let the system spawn 9 windows applications on 9 displays and run a Vive VR application all in single computer in the same time and it's pretty smooth. ( I forgot the actual frame rate but I wouldn't feel dizzy during experiencing the VR app.) 
+It is a panoramic projection system implemented in OpenFrameworks and was used in my art exhibition in National Taiwan Museum of Fine Arts. It has been demonstrated that I can let the system spawn 9 windows applications on 9 displays and run a Vive VR application all in single computer in the same time and it's pretty smooth. ( I forgot the actual frame rate but I wouldn't feel dizzy during experiencing the VR app.)
 The overall system contains 2 OpenFrameworks classes and their roles are:
-1. ofApp: 
-* receive an large texture via [Spout](http://spout.zeal.co/) library (In my case, it received an texture with resolution of 15390* 1200 from Unity). 
+1. ofApp:
+* receive an large texture via [Spout](http://spout.zeal.co/) library (In my case, it received an texture with resolution of 15390* 1200 from Unity).
 * show calibration GUI in calibration mode.
 * receive mouse and keyboard events.
 * receive OSC message from other application like Unity so it can be controlled via application in other platform.
@@ -19,23 +19,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* Windows OS (Currently,it only support Windows OS and has worked well in 8.1 and 10) 
+* Windows OS (Currently,it only support Windows OS and has worked well in 8.1 and 10)
 * OpenFrameworks SDK (I developed this with SDK version 0.9.8)
 * Visual Studio 2015
 
-### Setup
+### Setup this project
 
 1. Follow the instructions in OpenFrameworks website: (it can be skipped if you have already setup OF SDK)
 *  [Download SDK](http://openframeworks.cc/download/)
 *  [Setup SDK with Visual Studio](http://openframeworks.cc/setup/vs/)
-
 2. Download this repository and unzip it
-3. Open the project generator in the OpenFrameworks SDK folder(the path would be "{path to the root of OF SDK}\projectGenerator-vs")
-4. Set the Project path as where the unzipped repository folder is located in and click the "import" button.
-5. If the project is successfully imported, it should look like this:
-6. click the "Update" button and then click the "Open In IDE" button.
-7. click Build > Build Solution and after the project is successfully built, the executable would be in the bin folder of project folder.
-
+3. Open the project generator in the OpenFrameworks SDK folder (the path would be "{path to the root of OF SDK}\projectGenerator-vs")
+![projectGenerator](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/projectGenerator.PNG?raw=true)
+4. click the "import" button and select the project folder which is the root of bin and src.
+![setProjPath](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/setProjectPath.PNG?raw=true)
+5. If the project is successfully imported, it should look like the image below. click the "Update" button and then click the "Open In IDE" button.
+![importSucceed](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/importSucceed.PNG?raw=true)
+6. click Build > Build Solution and after the project is successfully built, the executable would be in the bin folder of project folder.
+![BuildSolution](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/BuildSolution.PNG?raw=true)
+![executable](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/executable.PNG?raw=true)
 ### Specify Parameters
 
 There is a parameter file called "param.xml" under the path {project path}\bin\data.
@@ -51,10 +53,20 @@ The meaning of these parameters:
 9. CornerY: the percentage of padding of Y direction in calibration mode.
 10. OverlapPixels: the width of overlapping area between two consecutive displays.
 11. SpoutSender: the name of the spout sender that sends the shared texture.
-12. resolution: the resolution of certain monitor. 
+12. resolution: the resolution of certain monitor.
 
+### Test the system
 
-## Specs of the computer in art exhibition:
+To test the system, you would need a SpoutSender. Here I provide the Unity SpoutSender used in my art exhibition. It creates several cameras, aligns their frustum , makes them render to a large renderTexture and uses a SpoutSender to share the texture.
+Steps of setting up the SpoutSender in Unity:
+1. drop the PanoramaSpoutSender.unitypackage into Unity asset folder.
+2. drop the PanoramaCamAndSpout.prefab into a scene and save the scene.(if you didn't save the scene after dropping the prefab, it may crash during runtime)
+3. click play button in Unity.
+4. set the AppMode as 0 in param.xml and run the executable in the bin folder of project folder.
+5. see whether the system project correctly.
+![testResult](https://github.com/gary9716/MultiDisplaySpoutSystem/blob/master/imgs/successfullyRunUp.png?raw=true)
+
+## Specs of the computer in the art exhibition:
 
 * CPU: i7 7700K
 * GPU: GTX 1060 Mini ITX OC 3G, GTX 1050Ti OC 4G, HD7750
@@ -82,5 +94,5 @@ This project is licensed under the GNU Lesser General Public License - see the [
 ## Acknowledgments
 
 * The great addons and library I have used in this project
-* Inspired by my friend called Liu Ting Chun who is studying in Taipei National University of the Arts 
+* Inspired by my friend called Liu Ting Chun who is studying in Taipei National University of the Arts
 *  [README Template](https://gist.github.com/PurpleBooth/b24679402957c63ec426)
